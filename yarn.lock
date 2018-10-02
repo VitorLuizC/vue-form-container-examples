@@ -6970,10 +6970,10 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
-vue-form-container@^0.0.0:
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/vue-form-container/-/vue-form-container-0.0.0.tgz#f1036e57f5a8978a689f649a4a337b62bd54ae84"
-  integrity sha512-YYJ1j4fzPUVqRjyBTP9dzaTxs4s50kgtCdVCqFjE2vqSmibqNPT93uGj0lj1Ie7h7nI/isjfhejOpQ4ZDZydIQ==
+vue-form-container@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/vue-form-container/-/vue-form-container-0.0.3.tgz#a18cff08d3d42e56093dce9fc03eebd3c20ba26f"
+  integrity sha512-7gde9Cy5+WJaUupXSnssRcHh8GEjGLFbat0LnRtRN8MG1oxDKM7X2/sZniLZsiqqEymtcgRl5qMBzg4cXBJTuw==
   dependencies:
     valite "^0.5.0"
 

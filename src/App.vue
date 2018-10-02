@@ -60,7 +60,7 @@
         await this.$form('SignInForm').validateForm();
         if (!this.$form('SignInForm').isValid)
           return;
-        console.dir(this.$form('SignInForm').values);
+        console.dir(this.$form('SignInForm').fields);
       }
     }
   };
