@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "vue": "^2.5.17",
-    "vue-form-container": "^0.0.3"
+    "vue-form-container": "../"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.4",

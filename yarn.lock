@@ -6114,13 +6114,6 @@ set-value@^2.0.0:
     is-plain-object "^2.0.3"
     split-string "^3.0.1"
 
-set-value@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/set-value/-/set-value-3.0.0.tgz#bc021514f46effed8176fd5f0f67e9988531141f"
-  integrity sha512-tqkg9wJ2TOsxbzIMG5NMAmzjdbDTAD0in7XuUzmFpJE4Ipi2QFBfgC2Z1/gfxcAmWCPsuutiEJyDIMRsrjrMOQ==
-  dependencies:
-    is-plain-object "^2.0.4"
-
 setimmediate@^1.0.4:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/setimmediate/-/setimmediate-1.0.5.tgz#290cbb232e306942d7d7ea9b83732ab7856f8285"
@@ -6936,13 +6929,12 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
-valite@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/valite/-/valite-0.5.0.tgz#ff67bc0e906d734bfe99dea37a2cf10a1a768a1a"
-  integrity sha512-t/hwrPQhxGJbWtaAfTx+7aGAP6yTIyPMkCs8SijkjIx3XbTLVeC19ZphTOkGetV6Ajbe4/drt15Ye7loJwmI6w==
+valite@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/valite/-/valite-0.6.0.tgz#d7dc562c847ac3d5c3d9dd224e61ece40e2e3fbd"
+  integrity sha512-2tPGDtMZjzzzOU5vmBNHKjxWV++DK6NJB0wdZvSSdVQoiFA+9yO2kPA9haKW7WDKznXKYIsJDEe1PWw52aHndA==
   dependencies:
     get-value "^3.0.1"
-    set-value "^3.0.0"
 
 vary@~1.1.2:
   version "1.1.2"
@@ -6970,12 +6962,10 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
-vue-form-container@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/vue-form-container/-/vue-form-container-0.0.3.tgz#a18cff08d3d42e56093dce9fc03eebd3c20ba26f"
-  integrity sha512-7gde9Cy5+WJaUupXSnssRcHh8GEjGLFbat0LnRtRN8MG1oxDKM7X2/sZniLZsiqqEymtcgRl5qMBzg4cXBJTuw==
+vue-form-container@../:
+  version "0.0.6"
   dependencies:
-    valite "^0.5.0"
+    valite "^0.6.0"
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.1"

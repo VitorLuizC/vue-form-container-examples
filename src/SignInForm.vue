@@ -1,0 +1,53 @@
+<template>
+  <section class="App">
+    <form-container name="SignInForm" :schema="schema" :initial="initial">
+      <template slot-scope="{ fields, errors }">
+        <fieldset>
+          <label>Username</label>
+          <input type="text" v-model="fields.username" />
+          <span>{{ errors.username }}</span>
+        </fieldset>
+
+        <fieldset>
+          <label>Password</label>
+          <input type="password" v-model="fields.password" />
+          <span>{{ errors.password }}</span>
+        </fieldset>
+      </template>
+    </form-container>
+
+    <button @click="save()">Salvar</button>
+  </section>
+</template>
+
+<script>
+  export default {
+    data () {
+      return {
+        schema: {
+          username: [
+            (v) => !!v.trim() || 'Username is required.',
+            (v) => v.length >= 4 || 'Username can\'t be smaller than 4 characters.',
+            (v) => v.length <= 36 || 'Username can\'t be higher than 36 characters.'
+          ],
+          password: [
+            (v) => !!v.trim() || 'Password is required.',
+            (v) => v.length >= 8 || 'Password can\'t be smaller than 8 characters.',
+            (v) => v.length <= 36 || 'Password can\'t be higher than 36 characters.'
+          ]
+        },
+        initial: {
+          username: 'user'
+        }
+      }
+    },
+    methods: {
+      async save () {
+        await this.$form('SignInForm').validateForm();
+        if (!this.$form('SignInForm').isValid)
+          return;
+        console.dir(this.$form('SignInForm').fields);
+      }
+    }
+  };
+</script>
