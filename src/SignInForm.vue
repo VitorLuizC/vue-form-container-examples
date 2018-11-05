@@ -1,7 +1,7 @@
 <template>
   <section class="App">
     <form-container name="SignInForm" :schema="schema" :initial="initial">
-      <template slot-scope="{ fields, errors }">
+      <form slot-scope="{ fields, errors }">
         <fieldset>
           <label>Username</label>
           <input type="text" v-model="fields.username" />
@@ -13,7 +13,7 @@
           <input type="password" v-model="fields.password" />
           <span>{{ errors.password }}</span>
         </fieldset>
-      </template>
+      </form>
     </form-container>
 
     <button @click="save()">Salvar</button>
