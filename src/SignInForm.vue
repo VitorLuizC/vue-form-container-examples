@@ -1,6 +1,6 @@
 <template>
   <section class="App">
-    <form-container name="SignInForm" :schema="schema" :initial="initial">
+    <form-container ref="form" :schema="schema" :initial="initial">
       <form slot-scope="{ fields, errors }">
         <fieldset>
           <label>Username</label>
@@ -21,7 +21,10 @@
 </template>
 
 <script>
+  import FormContainer from 'vue-form-container';
+
   export default {
+    components: { FormContainer },
     data () {
       return {
         schema: {
@@ -43,10 +46,10 @@
     },
     methods: {
       async save () {
-        await this.$form('SignInForm').validateForm();
-        if (!this.$form('SignInForm').isValid)
+        await this.$refs.form.validateForm();
+        if (!this.$refs.form.isValid)
           return;
-        console.dir(this.$form('SignInForm').fields);
+        console.dir(this.$refs.form.fields);
       }
     }
   };
